@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34322.80
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "basket wesite", "basket wesite\", "{EA0F3BE9-2CF5-41B5-A5C6-3F4D71000F04}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
+		Debug.AspNetCompiler.VirtualPath = "/basket wesite"
+		Debug.AspNetCompiler.PhysicalPath = "basket wesite\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\basket wesite\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/basket wesite"
+		Release.AspNetCompiler.PhysicalPath = "basket wesite\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\basket wesite\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "3880"
+		SlnRelativePath = "basket wesite\"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasketballApp", "BasketballApp\BasketballApp.csproj", "{6744D5F1-A800-425D-8150-BF5070659FDC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{11D77455-692C-4B58-A4DE-089BE49140CC} = {11D77455-692C-4B58-A4DE-089BE49140CC}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfBasketball", "WcfBasketball\WcfBasketball.csproj", "{11D77455-692C-4B58-A4DE-089BE49140CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA0F3BE9-2CF5-41B5-A5C6-3F4D71000F04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA0F3BE9-2CF5-41B5-A5C6-3F4D71000F04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA0F3BE9-2CF5-41B5-A5C6-3F4D71000F04}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA0F3BE9-2CF5-41B5-A5C6-3F4D71000F04}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{6744D5F1-A800-425D-8150-BF5070659FDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6744D5F1-A800-425D-8150-BF5070659FDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6744D5F1-A800-425D-8150-BF5070659FDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6744D5F1-A800-425D-8150-BF5070659FDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11D77455-692C-4B58-A4DE-089BE49140CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11D77455-692C-4B58-A4DE-089BE49140CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11D77455-692C-4B58-A4DE-089BE49140CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11D77455-692C-4B58-A4DE-089BE49140CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F4425B77-8D29-4ADE-95E2-93A3F9025596}
+	EndGlobalSection
+EndGlobal

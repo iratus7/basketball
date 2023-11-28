@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="62fa5d0a-e2d1-4717-9544-bc65dbb71abf" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:2181/Servicebasketball.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Servicebasketball3.xsd" MetadataType="Schema" ID="247a3c67-fd44-40ce-9a26-d39817520acb" SourceId="1" SourceUrl="http://localhost:2181/Servicebasketball.svc?xsd=xsd3" />
+    <MetadataFile FileName="Servicebasketball1.xsd" MetadataType="Schema" ID="e5758f4c-d93a-4a5e-9543-fd943b3a8839" SourceId="1" SourceUrl="http://localhost:2181/Servicebasketball.svc?xsd=xsd2" />
+    <MetadataFile FileName="Servicebasketball.wsdl" MetadataType="Wsdl" ID="eabdf08f-3f78-4eda-8b0b-9a06eaa1249b" SourceId="1" SourceUrl="http://localhost:2181/Servicebasketball.svc?wsdl" />
+    <MetadataFile FileName="Servicebasketball2.xsd" MetadataType="Schema" ID="ce7c2897-587e-4173-9a93-9496904c31ce" SourceId="1" SourceUrl="http://localhost:2181/Servicebasketball.svc?xsd=xsd0" />
+    <MetadataFile FileName="Servicebasketball.disco" MetadataType="Disco" ID="2358639e-00fc-4598-b167-7b17622231f5" SourceId="1" SourceUrl="http://localhost:2181/Servicebasketball.svc?disco" />
+    <MetadataFile FileName="Servicebasketball.xsd" MetadataType="Schema" ID="69c1c9de-88b2-4c7e-96e8-bb2d12897681" SourceId="1" SourceUrl="http://localhost:2181/Servicebasketball.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

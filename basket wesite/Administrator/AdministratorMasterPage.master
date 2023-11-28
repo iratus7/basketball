@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdministratorMasterPage.master.cs" Inherits="MasterPageAdmin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>ADMINISTRATOR PAGE</title>
+    <link href="../css/StyleSheetAdministrator.css" rel="stylesheet" type="text/css"/>
+    <style type="text/css">
+  
+</style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="bodyAddmin">
+
+    <form id="form1" runat="server">
+        <header>
+            <h1>ΣΕΛΙΔΑ ΔΙΑΧΕΙΡΗΣΗΣ</h1>
+            <div class="buttonsBackground"><a href="../Default.aspx"><img src="../images/admin%20images/logoaddmin.png" height="120px" width="120px" /></a>
+            <img src="../images/admin%20images/notebook.png" height="120px" width="120px" />
+            <nav class="InlineButtons">
+                <a href="AddGame.aspx" class="AddminButtons"><figure><img src="../images/admin%20images/addgames.png" height="80px" width="80px" /><legend>Add Games</legend></figure></a>
+                <a href="AddPlayers.aspx" class="AddminButtons"><figure><img src="../images/admin%20images/addplayers.png" height="80px" width="80px" /><legend>Add Players</legend></figure></a>
+                <a href="AddRef.aspx" class="AddminButtons"><figure><img src="../images/admin%20images/addreferees.png" height="80px" width="80px" /><legend>Add Referees</legend></figure></a>                
+                <a href="AddTeam.aspx" class="AddminButtons"><figure><img src="../images/admin%20images/addteam.png" height="80px" width="80px" /><legend>Add Teams</legend></figure></a>
+                <a href="AddCoach.aspx" class="AddminButtons"><figure><img src="../images/admin%20images/addcoach.png" height="80px" width="80px" /><legend>Add Coaches</legend></figure></a>
+                <a href="AddArena.aspx" class="AddminButtons"><figure><img src="../images/admin%20images/addarena.png" height="80px" width="80px" /><legend>Add Arenas</legend></figure></a>
+                <a href="TeamNews.aspx" class="AddminButtons"><figure><img src="../images/admin%20images/news.png" height="80px" width="80px" /><legend>Add News</legend></figure></a>
+                <a href="Report.aspx" class="AddminButtons"><figure><img src="../images/admin%20images/report.png" height="80px" width="80px" /><legend>Add Report</legend></figure></a>
+                <a href="AddPhotos.aspx" class="AddminButtons"><figure><img src="../images/admin%20images/addphotos.png" height="80px" width="80px" /><legend>Add Photos</legend></figure></a>
+                <a href="LatestNews.aspx" class="AddminButtons"><figure><img src="../images/admin%20images/addLatestNews.png" height="80px" width="80px" /><legend>Latest News</legend></figure></a>
+            </nav></div>
+            <hr width="92%" size="2">
+        </header>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

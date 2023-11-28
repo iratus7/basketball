@@ -1,0 +1,634 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MainMasterPage.master.cs" Inherits="MainMasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>BASKETBALL EVERYWARE</title>
+    <script src="Scripts/jquery-1.11.1.min.js"></script>
+<%--            <script src="Scripts/jquery-2.0.3.js"></script>--%>
+<%--        <script src="Scripts/jquery-2.0.3.min.map"></script>--%>
+
+ <%--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>--%>
+<%--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>--%>
+                <script type="text/javascript" src="Scripts/jquery.path.js"></script>    
+
+    <link href="css/StyleSheetMain.css" rel="stylesheet" type="text/css" />
+    <link href="css/Clock.css" rel="stylesheet" type="text/css"/>
+    <link href="css/teamsCircleMenu.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/CircleMenu.css" type="text/css" media="screen" />
+
+    <!--  <link href="css/CircleButtonsStyle.css" rel="stylesheet" type="text/css"/>  -->
+    <!--<script type="text/javascript" src="Scripts/jquery-1.js"></script> -->      
+    <!--<script type="text/javascript" src="Scripts/jquery-2.0.3.min.js"></script>--> 
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="bodyMain">    
+    <form id="form1" runat="server"> 
+         
+        
+        <%--<li><div class="earthdiv"><a href="Default.aspx"><asp:Image ToolTip="Home Page!" runat="server" ImageUrl="Imgearth" src="images/earth.png" class="earthdiv" /></a><img id="unicornEarth" src="images/FrontBall.png" /></div></li>--%>
+          <!-- Ball
+        <div id="FrontBall">
+            <img src="images/FrontBall.png" />
+        </div>-->                                       
+
+        <!-- clock html -->
+<div class="clock_container">
+<div class="clock">
+<ul>    
+	<li id="hours"></li>
+    <li class="point">:</li>
+    <li id="min"></li>
+    <li class="point">:</li>     
+    <li id="sec"></li>
+    <li class="point">"</li>
+    <li id="Date"></li>
+</ul>
+</div>
+</div>
+  
+           <%--loading div--%>
+                <%--<div id="dvLoading"></div>--%>
+        
+        <div id="maincontent">
+
+            <header class="headerMain">
+                
+                <!-- kukliko menu me koumpia efedriko 
+                        <div id="divCircle">
+        	<div style="top: 125px; left: 125px;" id="middleBubble"><p><b>primary and preventative care:</b><br>annual physicals,<br>illness, and<br>gynecology exams</p></div>
+            <img style="top: 246.362px; left: 388.86px;" src="images/CircleButtons/home-laboratory-icon-off.png" id="laboratory" data-bubble1="laboratory:" data-bubble2="discounted lab work&lt;br /&gt;on-site"/>
+            <img style="top: 367.363px; left: 298.261px;" src="images/CircleButtons/home-counseling-weight-loss-icon-off.png" id="counseling-weight-loss" data-bubble1="counseling and&lt;br /&gt;personalized&lt;br /&gt;weight loss:" data-bubble2="stress mngt., depression,&lt;br /&gt;smoking, and weight loss"/>
+            <img style="top: 388.86px; left: 148.638px;" src="images/CircleButtons/home-quick-care-icon-off.png" id="quick-care" data-bubble1="quick care:" data-bubble2="acute illness due to colds,&lt;br /&gt;flu, urinary tract infection,&lt;br /&gt;wounds, ear infections,&lt;br /&gt;and more..."/>
+            <img style="top: 298.261px; left: 27.6371px;" src="images/CircleButtons/home-specialist-coordination-icon-off.png" id="specialist-coordination" data-bubble1="specialist coordination:" data-bubble2="referrals to a specialist&lt;br /&gt;or hospital should&lt;br /&gt;it be needed"/>
+            <img style="top: 148.638px; left: 6.1398px;" src="images/CircleButtons/home-primary-preventative-icon-on.png" id="primary-preventative" data-bubble1="primary and preventative care:" data-bubble2="annual physicals,&lt;br /&gt;illness, and&lt;br /&gt;gynecology exams" class="homepageGridDefault"/>
+            <img style="top: 27.6371px; left: 96.7388px;" src="images/CircleButtons/home-school-physicals-icon-off.png" id="school-physicals" data-bubble1="school and&lt;br /&gt;sports physicals:" data-bubble2="annual physicals and&lt;br /&gt;exams required for school&lt;br /&gt;and sport programs"/>
+            <img style="top: 6.1398px; left: 246.362px;" src="images/CircleButtons/home-perscriptions-icon-off.png" id="perscriptions" data-bubble1="perscriptions:" data-bubble2="discounted perscription&lt;br /&gt;and medications on site"/>
+            <img style="top: 96.7388px; left: 367.363px;" src="images/CircleButtons/home-chronic-disease-icon-off.png" id="chronic-disease" data-bubble1="chronic disease&lt;br /&gt;management:" data-bubble2="hormonal imbalance, depression, fibromyalsia, high blood pressure, high cholesterol, and more"/>
+        </div>
+                -->
+
+
+                <!--efe header
+                <div class="headerFilm">
+                </div>-->
+
+                <!-- moving ball,sto default ta arxeia function,jquery.circulate.js -->
+ <div class="divball">   <img id="unicorn" src="images/FrontBall.png" class="divball" /></div>
+
+
+
+                        <!-- aristero menu kukliko -->
+                <div id="content" class="CircleMenuContainer">
+            <div class="wrapper">
+                <div id="images" class="images">  
+                    <img id="image_about" src="images/CircleMenu/images/1.png" alt="" width="402" height="402" style="display:block;"/>
+                    <img id="image_portfolio" src="images/CircleMenu/images/2.png" alt="" width="402" height="402"/>
+                    <img id="image_contact" src="images/CircleMenu/images/3.png" alt="" width="402" height="402" />
+                </div>
+                <div class="circleBig">
+                    <div id="menu" class="menu">
+
+                        <%--links tou megalou kuklou--%>
+                        <a id="about" class="about" href="FirstLetterPlayers.aspx">About me</a>
+                        <a id="portfolio" class="portfolio" href="Photos.aspx?1">Portfolio</a>
+                        <a id="contact" class="contact" href="Results.aspx">Contact</a>
+
+                            <%--link Efficiency--%>
+                    <asp:HyperLink ID="HyperLinkEfficiency" runat="server" CssClass="HLeff" ToolTip="TEAM EFFICIENCY" NavigateUrl="TeamEfficiency.aspx"><img src="images/effImage.png" alt=""/></asp:HyperLink>                        
+
+                    </div>
+                </div>
+            </div>
+            <div id="circle_about" class="circle">
+                <div class="description">
+                    <ul>
+                        <li><a href="FirstLetterPlayers.aspx">Players</a></li>
+                        <li><a href="AllCoaches.aspx">Coaches</a></li>
+                        <li><a href="AllReferees.aspx">Referees</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="circle_portfolio" class="circle">
+                <div class="description">
+                    <div class="thumbs">
+                        <asp:HyperLink ID="HyperLinkAlbum1" runat="server" ToolTip="History Album" NavigateUrl="Photos.aspx?1"><img src="images/CircleMenu/thumbs/1.jpg" alt=""/></asp:HyperLink>                        
+                        <asp:HyperLink ID="HyperLinkAlbum2" runat="server" ToolTip="Nba Album" NavigateUrl="Photos.aspx?2"><img src="images/CircleMenu/thumbs/2.jpg" alt=""/></asp:HyperLink>
+                        <asp:HyperLink ID="HyperLinkAlbum3" runat="server" ToolTip="European Basketball" NavigateUrl="Photos.aspx?3"><img src="images/CircleMenu/thumbs/3.jpg" alt=""/></asp:HyperLink>
+                        <asp:HyperLink ID="HyperLinkAlbum4" runat="server" ToolTip="South Americas Basketball" NavigateUrl="Photos.aspx?4"><img src="images/CircleMenu/thumbs/4.jpg" alt=""/></asp:HyperLink>
+                        <asp:HyperLink ID="HyperLinkAlbum5" runat="server" ToolTip="Greek Basketball" NavigateUrl="Photos.aspx?5"><img src="images/CircleMenu/thumbs/5.jpg" alt=""/></asp:HyperLink>
+                        <asp:HyperLink ID="HyperLinkAlbum6" runat="server" ToolTip="Youth Basketball" NavigateUrl="Photos.aspx?6"><img src="images/CircleMenu/thumbs/6.jpg" alt=""/></asp:HyperLink>
+                        <asp:HyperLink ID="HyperLinkAlbum7" runat="server" ToolTip="Best Three Pointers" NavigateUrl="Photos.aspx?7"><img src="images/CircleMenu/thumbs/7.jpg" alt=""/></asp:HyperLink>
+                        <asp:HyperLink ID="HyperLinkAlbum8" runat="server" ToolTip="Best Dunkers" NavigateUrl="Photos.aspx?8"><img src="images/CircleMenu/thumbs/8.jpg" alt=""/></asp:HyperLink>
+                        <asp:HyperLink ID="HyperLinkAlbum9" runat="server" ToolTip="Best Defensive Players" NavigateUrl="Photos.aspx?9"><img src="images/CircleMenu/thumbs/9.jpg" alt=""/></asp:HyperLink> 
+                    </div>
+                </div>
+            </div>
+            <div id="circle_contact" class="circle">
+                <div class="description">
+                    <ul>
+                        <li><a href="Statistics.aspx">Statistics</a></li>
+                        <li><a href="Results.aspx">Results</a></li>
+                        <li><a href="LiveScore.aspx">Live Scores</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+                
+                <!-- kuklika koumpia -->                
+    <div class="circle-container">
+
+
+    <a href='Default.aspx' id="deg360" class='center'></a>            
+        <asp:HyperLink ID="HyperLinkBarcelona" runat="server" CssClass='deg0' NavigateUrl="Teams.aspx?id=2" ></asp:HyperLink>
+        <asp:HyperLink ID="HyperLinkCska" runat="server" CssClass='deg330' NavigateUrl="Teams.aspx?id=3" ></asp:HyperLink>
+        <asp:HyperLink ID="HyperLinkMacabi" runat="server" CssClass='deg30' NavigateUrl="Teams.aspx?id=4" ></asp:HyperLink>
+        <asp:HyperLink ID="HyperLinkMinessotaTimberwolves" runat="server" CssClass='deg60' NavigateUrl="Teams.aspx?id=5" ></asp:HyperLink>
+        <asp:HyperLink ID="HyperLinkOlympiakos" runat="server" CssClass='deg90' NavigateUrl="Teams.aspx?id=6" ></asp:HyperLink>
+        <asp:HyperLink ID="HyperLinkPanathinaikos" runat="server" CssClass='deg120' NavigateUrl="Teams.aspx?id=7" ></asp:HyperLink>
+        <asp:HyperLink ID="HyperLinkPaok" runat="server" CssClass='deg150' NavigateUrl="Teams.aspx?id=8" ></asp:HyperLink>
+        <asp:HyperLink ID="HyperLinkPartizan" runat="server" CssClass='deg180' NavigateUrl="Teams.aspx?id=9" ></asp:HyperLink>
+        <asp:HyperLink ID="HyperLinkRealMadrid" runat="server" CssClass='deg210' NavigateUrl="Teams.aspx?id=10" ></asp:HyperLink>
+        <asp:HyperLink ID="HyperLinkSanAntonioSpurs" runat="server" CssClass='deg240' NavigateUrl="Teams.aspx?id=11" ></asp:HyperLink>
+        <asp:HyperLink ID="HyperLinkZalgirisKaunas" runat="server" CssClass='deg270' NavigateUrl="Teams.aspx?id=12" ></asp:HyperLink>
+        <asp:HyperLink ID="HyperLinkAris" runat="server" CssClass='deg300' NavigateUrl="Teams.aspx?id=1" ></asp:HyperLink>
+        <div class="TeamHover"></div></div>
+
+
+   <!--   <a href="Barcelona.aspx" class='deg0'><img src="images/teams/BARCELONA.png"/></a>
+    <a href="Cska.aspx" class='deg30'><img src="images/teams/CSKA.png"/></a>
+    <a href="Macabi.aspx" class='deg60'><img src="images/teams/MACABI.png"/></a>
+    <a href="Minessota Timberwolves.aspx" class='deg90'><img src="images/teams/MINESSOTA TIMBERWOLVES.png"/></a>
+    <a href="Olympiakos.aspx" class='deg120'><img src="images/teams/OLYMPIAKOS.png"/></a>
+    <a href="Panathinaikos.aspx" class='deg150'><img src="images/teams/PANATHINAIKOS.png"/></a>
+        <a href="Paok.aspx" class='deg180'><img src="images/teams/PAOK.png"/></a>
+    <a href="Partizan.aspx" class='deg210'><img src="images/teams/PARTIZAN.png"/></a>
+    <a href="Real Madrid.aspx" class='deg240'><img src="images/teams/REAL MADRID.png"/></a>
+    <a href="San Antonio Spurs.aspx" class='deg270'><img src="images/teams/SAN ANTONIO SPURS.png"/></a>
+    <a href="Zalgiris Kaunas.aspx" class='deg300'><img src="images/teams/ZALGIRIS KAUNAS.png"/></a>
+    <a href="Aris.aspx" class='deg330'><img src="images/teams/ARIS.png"/></a>-->
+        
+
+
+                
+                      
+                
+            </header>
+            <nav class="navMain"></nav>
+              <div id="changing">
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>                                     
+
+                  </div>
+            
+            
+            <div id="footerback">
+            </div>
+                                                                          
+
+            <footer class="footerMain">
+
+                <!--efe footer
+                <div class="footerFilm" ></div>-->
+                   
+
+
+               <a href="#top" id="back-top"><img alt="Back To Top" src="images/BackToTop.png" class="BackToTopImg"/></a>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <div class="CSSTable">
+
+                    <table class="footerTable">
+                        <tr>
+                            <th><a href="Default.aspx">Home</a></th>
+                            <th><a href="Photos.aspx?1">Photos</a></th>
+                            <th><a href="Leaders.aspx">Leaders</a></th>
+                            <th><a href="TeamStats.aspx">Teams</a></th>
+                            <th><a href="Contact.aspx">Contact</a></th>  
+                        </tr>
+                        <tr>
+                            <td colspan="5"><!--Copyright 2013 All Rights Reserved --><asp:LoginView ID="LoginViewAddmin" runat="server">
+        <AnonymousTemplate>
+            Καλοσορίσατε!!!   
+             <asp:LoginStatus ID="LoginStatusBasketball" runat="server" LogoutPageUrl="~/Default.aspx" />
+        </AnonymousTemplate>
+        <LoggedInTemplate>
+            Καλοσόρισες...
+            <asp:LoginName ID="LoginNameAddmin" runat="server" /><a href="Administrator/Default.aspx" target="_blank">&nbsp;➜ Addmin Page</a>
+            <br /><a href="ChangePassword.aspx">Αλλαγή ➰ Password</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:LoginStatus ID="LoginStatus2" runat="server" LogoutText="Αποσύνδεση" />
+        </LoggedInTemplate>
+    </asp:LoginView></td>
+                        </tr>
+                        <tr>
+                            <td colspan="5">Designed by ...........<a href="mailto:iratus7@yahoo.gr">@contact</a></td>
+                        </tr>
+                    </table>                  
+                     
+
+                </div>
+            </footer>
+
+                   <!-- START SOCIAL MEDIA WIDGET --><ul id="socialbar"><li id="facebook"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=" onclick="this.href" ><asp:Image ID="Image1" runat="server" ToolTip="Share us on Facebook!" ImageUrl="images/SocialMediaImages/facebook.png"/></a></li><li id="twitter"><a target="_blank" href="https://twitter.com/home?status=" onclick="this.href"><asp:Image ID="Image2" runat="server" ToolTip="Tweet us on Twitter!" ImageUrl="images/SocialMediaImages/twitter.png"/></a></li><li id="linkedin"><a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:3716/basket%252520wesite/Default.aspx&title=Basketball%20Everyware&summary=&source="><asp:Image ID="Image3" ToolTip="Link us on linkedin!" runat="server" ImageUrl="images/SocialMediaImages/linkedin.png"/></a></li><li id="Flickr"><a target="_blank" href="http://Flickr.com/groups/39063675@N00/"><asp:Image ID="Image4" ToolTip="Flickr us on Flickr!" runat="server" ImageUrl="images/SocialMediaImages/flickr.png"/></a></li><li id="youtube"><a target="_blank" href="http://youtube.com/user/NBA"><asp:Image ID="Image5" ToolTip="View us on Youtube!" runat="server" ImageUrl="images/SocialMediaImages/youtube.png"/></a></li><li><div runat="server" id="dvLoading"></div></li></ul><style>#socialbar img {border:0px;}#socialbar li img {width:75px; height:75px;}#socialbar li a:hover {position:relative;left:5px;}#socialbar{list-style: none outside none; padding: 0px; margin:0px; position: fixed; top: 100px; left: 3px;}#main #content-1,#pageframe,.IE #sidebar{overflow:visible;}.IE #bottom_decor,.IE #main #sidebar{position:static;}</style><script>document.getElementById("socialbar").parentNode.parentNode.parentNode.style.height = "0px"; document.getElementById("socialbar").parentNode.parentNode.parentNode.style.padding = "0px" </script><style>#content-2{margin:0px;}#main #sidebar{margin:0px;height:0px;width:0px;}</style><!-- END SOCIAL MEDIA WIDGET -->
+           </div>
+
+<script>
+    //loading animation gif 
+            $(window).load(function () {
+                $('#dvLoading').fadeOut(1200);
+            });
+ </script>
+
+
+    <%--/*earth ball */  
+         //   $(window).load(function () {
+         //       $("#unicornEarth").css("left", $("#unicornEarth").position().left).circulate({
+         //    sizeAdjustment: 20,
+         //    speed: 1000,
+         //    width: -140,
+         //    height: 20,
+         //    loop: true,
+         //    zIndexValues: [15, -1, -1, 5]
+         //});
+
+         //var angle = 0;
+         //setInterval(function(){
+         //    angle+=3;
+         //    $("#unicornEarth").rotate(angle);
+         //}, 50);   
+         //});
+            /*End earth ball*/--%>
+
+
+            
+       
+
+        <!-- animate to top -->
+        <script type="text/javascript">
+            $('#back-top').click(function () {
+                $('html').animate({
+                    scrollTop: 0
+                }, 800);
+                return false;
+            });
+        </script>
+
+
+
+<!-- clock script -->
+        <script type="text/javascript" src="Scripts/date_time.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        // Create two variable with the names of the months and days in an array
+        var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+
+        // Create a newDate() object
+        var newDate = new Date();
+        // Extract the current date from Date object
+        newDate.setDate(newDate.getDate());
+        // Output the day, date, month and year    
+        $('#Date').html(dayNames[newDate.getDay()] + " " + newDate.getDate() + ' ' + monthNames[newDate.getMonth()] + ' ' + newDate.getFullYear());
+
+        setInterval(function () {
+            // Create a newDate() object and extract the seconds of the current time on the visitor's
+            var seconds = new Date().getSeconds();
+            // Add a leading zero to seconds value
+            $("#sec").html((seconds < 10 ? "0" : "") + seconds);
+        }, 1000);
+
+        setInterval(function () {
+            // Create a newDate() object and extract the minutes of the current time on the visitor's
+            var minutes = new Date().getMinutes();
+            // Add a leading zero to the minutes value
+            $("#min").html((minutes < 10 ? "0" : "") + minutes);
+        }, 1000);
+
+        setInterval(function () {
+            // Create a newDate() object and extract the hours of the current time on the visitor's
+            var hours = new Date().getHours();
+            // Add a leading zero to the hours value
+            $("#hours").html((hours < 10 ? "0" : "") + hours);
+        }, 1000);
+
+    });
+    
+   
+       
+    
+    /*efe menu omadwn*/
+
+    $('.circle-container a').hover(function () {
+        $(this).addClass('hovered');
+    }, function () {
+        $(this).removeClass('hovered');
+
+        /* $('.circle-container').rotate({
+                angle: 0,
+                animateTo: 360,
+                easing: $.easing.easeInOutElastic,
+                duration: 2000
+
+            });*/  
+    });
+
+</script>
+
+        
+        <script type="text/javascript">
+            //$("#changing").delay(200);
+            //$("#changing").animate({ height: 'toggle' }, "slow");
+            //$(this).css({ 'display': 'inline-block' });
+
+            //$('#changing').hide();
+            //$("#changing").delay(200);
+
+            $('#changing').slideUp();
+
+            $('#changing').slideDown(3000);
+
+            $('.circle-container').css({
+                'top' : '70px',
+                'left' : '650px'});
+            $('.wrapper').css({
+                'top' : '90px',
+                'left': '200px'
+            });
+
+
+            /*HOVER EFFECT STIS OMADES*/
+            $('.deg0').hover(function () {
+                $('.TeamHover').animate({ 'left': 'toggle', 'opacity': 'toggle' })
+                $('.TeamHover').css({ 'background-image': 'url(images/teams/BARCELONA.png) ' });
+            });            
+            $('.deg30').hover(function () {
+                $('.TeamHover').animate({ 'left': 'toggle', 'opacity': 'toggle' })
+                $('.TeamHover').css({ 'background-image': 'url(images/teams/MACABI.png) ' });
+            });
+            $('.deg60').hover(function () {
+                $('.TeamHover').animate({ 'left': 'toggle', 'opacity': 'toggle' })
+                $('.TeamHover').css({ 'background-image': 'url(images/teams/MINESSOTA%20TIMBERWOLVES.png) ' });
+            });
+            $('.deg90').hover(function () {
+                $('.TeamHover').animate({ 'left': 'toggle', 'opacity': 'toggle' })
+                $('.TeamHover').css({ 'background-image': 'url(images/teams/OLYMPIAKOS.png) ' });
+            });
+            $('.deg120').hover(function () {
+                $('.TeamHover').animate({ 'left': 'toggle', 'opacity': 'toggle' })
+                $('.TeamHover').css({ 'background-image': 'url(images/teams/PANATHINAIKOS.png) ' });
+            });
+            $('.deg150').hover(function () {
+                $('.TeamHover').animate({ 'left': 'toggle', 'opacity': 'toggle' })
+                $('.TeamHover').css({ 'background-image': 'url(images/teams/PAOK.png) ' });
+            });
+            $('.deg180').hover(function () {
+                $('.TeamHover').animate({ 'opacity': 'toggle' })
+                $('.TeamHover').css({ 'background-image': 'url(images/teams/PARTIZAN.png) ' });
+            });
+            $('.deg210').hover(function () {
+                $('.TeamHover').animate({ 'left': 'toggle', 'opacity': 'toggle' })
+                $('.TeamHover').css({ 'background-image': 'url(images/teams/REAL%20MADRID.png) ' });
+            });
+            $('.deg240').hover(function () {
+                $('.TeamHover').animate({ 'left': 'toggle', 'opacity': 'toggle' })
+                $('.TeamHover').css({ 'background-image': 'url(images/teams/SAN%20ANTONIO%20SPURS.png) ' });
+            });
+            $('.deg270').hover(function () {
+                $('.TeamHover').animate({ 'left': 'toggle', 'opacity': 'toggle' })
+                $('.TeamHover').css({ 'background-image': 'url(images/teams/ZALGIRIS%20KAUNAS.png) ' });
+            });
+            $('.deg300').hover(function () {
+                $('.TeamHover').animate({ 'left': 'toggle', 'opacity': 'toggle' })
+                $('.TeamHover').css({ 'background-image': 'url(images/teams/ARIS.png) ' });
+            });
+            $('.deg330').hover(function () {
+                $('.TeamHover').animate({ 'left': 'toggle', 'opacity': 'toggle' })
+                $('.TeamHover').css({ 'background-image': 'url(images/teams/CSKA.png) ' });
+            });
+            
+            
+            /*$('.deg330').hover(function () {
+                $('.bodyMain').css({ 'background-image': 'url(images/teams/CSKA.png) ' });
+            });*/
+
+            $('.circle-container').mouseout(function () {
+                $('.bodyMain').css({ 'background-image': 'url(images/background.jpg) ' });
+            });
+
+            
+        </script>
+
+
+       <!-- <script type="text/javascript" src="Scripts/jstween/jstween-1.1.js"></script>
+        <script type="text/javascript" src="Scripts/jstween/jstween-1.1.min.js"></script>
+        <script type="text/javascript">
+                          
+      /*      $('.wrapper').tween({
+                left: {
+                    start: -300,
+                    stop: 200,
+                    time: 0,
+                    units: 'px',
+                    duration: 4,
+                    effect: 'easeInOut'
+                },
+                top: {
+                    start: -200,
+                    stop: 90,
+                    time: 0,
+                    units: 'px',
+                    duration:2,
+                    effect: 'easeInOut'
+                }
+            });
+
+            $('.circle-container').tween({
+                left: {
+                    start: 150,
+                    stop: 0,
+                    time: 0,
+                    units: 'px',
+                    duration: 4,
+                    effect: 'easeInOut'
+                },
+                top: {
+                    start: 1500,
+                    stop: 0,
+                    time: 0,
+                    units: 'px',
+                    duration: 2,
+                    effect: 'easeInOut'
+                }
+            });
+
+
+            $('.circleBig').tween({
+                rotate: {
+                    start: 0,
+                    stop: 360,
+                    time: 1,
+                    duration: 4,
+                    effect: 'easeInOut'
+                }
+            });
+
+            $('.circleBig, .circle-container img').tween({
+                rotate: {
+                    start: 0,
+                    stop: 360,
+                    time: 1,
+                    duration: 2,
+                    effect: 'easeInOut'
+                }
+            });
+            $.play();*/
+</script> -->
+           
+            
+
+
+
+
+
+
+
+
+        <!--kukliko menu me efe kinisis
+    <script type="text/javascript" src="Scripts/jquery.easing.1.3.js"></script>??????-->
+
+            <script type="text/javascript">
+                $(function () {
+
+                    /* when page loads animate the about section by default */
+                    //move($('#about'),2000,2);
+
+                    $('#menu > a').mouseover(
+                    function () {         
+                        var $this = $(this);
+                        move($this, 800, 1);                    
+
+                        /*prostheto rotate sto default mono*/
+                        $(".circle").rotate({
+                            angle: 0,
+                            animateTo: 360,
+                            duration: 1500
+                        });
+                        /*ws edw*/
+
+                    }
+                );
+                    /*
+                    function to animate / show one circle.
+                    speed is the time it takes to show the circle
+                    turns is the turns the circle gives around the big circle
+                     */
+                    function move($elem, speed, turns) {
+                        var id = $elem.attr('id');
+                        var $circle = $('#circle_' + id);
+
+                        /* if hover the same one nothing happens */
+                        if ($circle.css('opacity') == 1)
+                            return;
+
+                        /* change the image */
+                        $('#image_' + id).stop(true, true).fadeIn(650).siblings().not(this).fadeOut(650);
+                        
+                        /*
+                        if there's a circle already, then let's remove it:
+                        either animate it in a circular movement or just fading out, depending on the current position of it
+                         */
+                        $('#content .circle').each(function (i) { 
+                            var $theCircle = $(this);
+                            if ($theCircle.css('opacity') == 1)
+                                $theCircle.stop() 
+                            .animate({
+                                path: new $.path.arc({
+                                    center: [409, 359],
+                                    radius: 257,
+                                    start: 65,
+                                    end: -110,
+                                    dir: -1
+                                }),
+                                opacity: '0'
+                            }, 1500);                    
+                                
+                            else
+                                $theCircle.stop()
+                            .animate({ opacity: '0' }, 200);
+                        });
+
+                        /* make the circle appear in a circular movement */
+                        var end = 65 - 360 * (turns - 1);
+                        $circle.stop()
+                        .animate({
+                            path: new $.path.arc({
+                                center: [409, 359],
+                                radius: 257,
+                                start: 180,
+                                end: end,
+                                dir: -1
+                            }),
+                            opacity: '1'
+                        }, speed);
+                    }
+                });
+             </script>
+    </form>
+   <!--     efedriko menu kuklikwn koumpiwn Script
+			<script type="text/javascript">
+			    $(document).ready(function () {
+			        //Center the "info" bubble in the  "circle" div
+			        var divTop = ($("#divCircle").height() - $("#middleBubble").height()) / 2;
+			        var divLeft = ($("#divCircle").width() - $("#middleBubble").width()) / 2;
+			        $("#middleBubble").css("top", divTop + "px");
+			        $("#middleBubble").css("left", divLeft + "px");
+
+			        //Arrange the icons in a circle centered in the div
+			        numItems = $("#divCircle img").length; //How many items are in the circle?
+			        start = 0.25; //the angle to put the first image at. a number between 0 and 2pi
+			        step = (2 * Math.PI) / numItems; //calculate the amount of space to put between the items.
+
+			        //Now loop through the buttons and position them in a circle
+			        $("#divCircle img").each(function (index) {
+			            radius = ($("#divCircle").width() - $(this).width()) / 2; //The radius is the distance from the center of the div to the middle of an icon
+			            //the following lines are a standard formula for calculating points on a circle. x = cx + r * cos(a); y = cy + r * sin(a)
+			            //We have made adjustments because the center of the circle is not at (0,0), but rather the top/left coordinates for the center of the div
+			            //We also adjust for the fact that we need to know the coordinates for the top-left corner of the image, not for the center of the image.
+			            tmpTop = (($("#divCircle").height() / 2) + radius * Math.sin(start)) - ($(this).height() / 2);
+			            tmpLeft = (($("#divCircle").width() / 2) + radius * Math.cos(start)) - ($(this).width() / 2);
+			            start += step; //add the "step" number of radians to jump to the next icon
+
+			            //set the top/left settings for the image
+			            $(this).css("top", tmpTop);
+			            $(this).css("left", tmpLeft);
+			        });
+
+			        //set the highlight and bubble default based on the homepageGridDefault class
+			        currentGridSelector = $(".homepageGridDefault").attr("id");
+			        $("#" + currentGridSelector).attr("src", "images/CircleButtons/home-" + currentGridSelector + "-icon-on.png");
+			        $("#middleBubble").html("<p><b>" + $(".homepageGridDefault").data("bubble1") + "</b><br />" + $(".homepageGridDefault").data("bubble2") + "</p>");
+
+			        //Setup the grid to change the highlighted bubble on mouseover ans click
+			        $("#divCircle img").mouseover(function () {
+			            //if the selected option has changed, deactivate the current selection
+			            if (currentGridSelector != $(this).attr("id")) {
+			                $("#" + currentGridSelector).attr("src", "images/CircleButtons/home-" + currentGridSelector + "-icon-off.png");
+			            }
+			            //turn on the new selection
+			            $(this).attr("src", "images/CircleButtons/home-" + $(this).attr("id") + "-icon-on.png");
+			            //set the content of the center bubble
+			            $("#middleBubble").html("<p><b>" + $(this).data("bubble1") + "</b><br />" + $(this).data("bubble2") + "</p>");
+			            currentGridSelector = $(this).attr("id");
+			        });
+			    });
+	</script>  -->
+   
+</body>
+</html>

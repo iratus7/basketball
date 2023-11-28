@@ -1,0 +1,38 @@
+
+#divCircle {
+    margin-left: auto;
+    margin-right: 0px;
+    width: 500px;
+    height: 500px;
+    position: relative;
+
+}
+
+    #divCircle img {
+        position: absolute;
+        width: 21%;
+        height: 21%;
+    }
+
+#middleBubble {
+    text-align: center;
+    vertical-align: top;
+    background: url(../images/CircleButtons/home-blank-bubble.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #252525; /*#6d6e71*/
+    font-size: 1em;
+    height: 50%;
+    width: 50%;
+    margin: auto;
+    position: absolute;
+    text-align: center;
+}
+
+    #middleBubble b {
+        font-size: 1.2em;
+    }
+
+    #middleBubble p {
+        margin: 2em;
+    }

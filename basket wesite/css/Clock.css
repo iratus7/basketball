@@ -1,0 +1,30 @@
+@font-face {
+	font-family: LMS I Love This Game;
+	src: url('../fonts/LMS I Love This Game.ttf') format('truetype');
+}
+
+.clock_container {width: 960px; margin: 0 auto; overflow: hidden;display:inline}
+
+.clock {width:800px; margin:0 auto; padding:5px;}
+
+#Date { font-family: LMS I Love This Game; font-size:16px; text-align:center; text-shadow:0 0 5px #00c6ff;padding-left:20px; }
+
+.clock_container ul { width:800px; margin:0 auto; padding:0px; list-style:none;text-align:center; }
+.clock_container ul li { display:inline; font-size:20px; text-align:center; font-family: LMS I Love This Game; text-shadow:0 0 5px #00c6ff; }
+
+.point { position:relative; -moz-animation:mymove 1s ease infinite;padding-left:5px; padding-right:5px; }
+
+@-webkit-keyframes mymove 
+{
+0% {opacity:1.0; text-shadow:0 0 20px #00c6ff;}
+50% {opacity:0; text-shadow:none; }
+100% {opacity:1.0; text-shadow:0 0 20px #00c6ff; }	
+}
+
+
+@-moz-keyframes mymove 
+{
+0% {opacity:1.0; text-shadow:0 0 20px #00c6ff;}
+50% {opacity:0; text-shadow:none; }
+100% {opacity:1.0; text-shadow:0 0 20px #00c6ff; }	
+}

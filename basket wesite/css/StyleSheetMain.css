@@ -1,0 +1,522 @@
+﻿@font-face {
+	font-family: LMS I Love This Game;
+	src: url('../fonts/LMS I Love This Game.ttf') format('truetype');
+}
+@font-face {
+	font-family: Erbos Draco 1st Open NBP;
+	src: url('../fonts/erbos_draco_1st_open_nbp.ttf') format('truetype');
+}
+
+.bodyMain {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    background-image: url(../images/background.jpg);
+    background-repeat: repeat;
+    color: #FFF;
+    background-attachment: fixed;
+    background-color:#C6E2EE;
+    overflow-y:scroll;overflow-x:auto/*Gia na mi bgazei scroll otan megalwnei*/
+}
+
+/*loadin animation start*/
+#dvLoading
+{
+   background:#000 url(../images/ajax_progress3.gif) no-repeat center center;
+   position: absolute;
+   top: 503px;
+   left: 10%;
+   width: 30px;
+   height: 30px;
+   -moz-border-radius: 15px;
+   -webkit-border-radius: 15px;
+   border-radius: 15px;
+    
+    /*margin:-60px 0 0 -60px;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;*/
+}
+/*@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }*/
+/*loadin animation end*/
+
+.WelcomeText {
+    font-family: LMS I Love This Game;
+    line-height: 1.5em;
+    color: #1f355c;
+    font-weight: bold;
+    font-size: 40px;
+    /*text-shadow: 0px 0px 0 #C6E2EE,1px 1px 0 rgb(106,24,126),2px 2px 0 #7398c2,3px 3px 0 rgb(77,-5,97),4px 4px 0 rgb(63,-19,83),5px 5px 0 rgb(48,-34,68), 6px 6px 0 rgb(34,-48,54),7px 7px 6px rgba(0,0,0,0.6),7px 7px 1px rgba(0,0,0,0.5),0px 0px 6px rgba(0,0,0,.2);*/
+}
+.PBPListBox{border-style:double;
+    border-width:3px;
+    border:double;
+    font-size:12pt;
+    font-family:Verdana;
+    background-color: #111111;
+    color: #C6E2EE;
+}
+.styled-select {
+   font-size:15px;
+   min-height: 26px;
+   overflow: hidden;
+   background: url(../images/down_arrow_select.jpg) repeat-x center #aba49e;
+   border: 1px solid #c1dce5;border-radius: 10px 10px 10px 10px;padding:2px 2px 2px 2px;
+   min-width:50px;   
+   }
+.footerTable
+{display:inline;border:1px solid green;padding-top:5px;background-color:#124272;opacity:0.7;position:relative;left:36%;
+box-shadow: 5px 5px 10px 10px #c1dce5;}
+.footerTable td {
+    color:black;  border:2px dotted green;background-color:#e7f4fa;opacity:0.9;
+}
+.footerTable th
+{font-size:larger;
+text-align:center;
+}
+.TimeRemainGrid{font-family: 'Erbos Draco 1st Open NBP';
+                color:yellow;
+}
+.Livescores {       
+    padding-top: 5px;
+    background-color: #124272;
+    position: relative;
+    margin: 0 auto;
+    box-shadow: 2px 2px 5px 5px #c1dce5;
+    border-radius: 10px 10px 10px 10px;
+    text-align:center;
+    }
+.MapContact {
+    border: 1px solid green;text-align:center;
+    padding-top: 10px;
+    background-color: #124272;
+    position: relative;
+    margin: 0 auto;width:615px;height:460px;
+    box-shadow: 2px 2px 6px 6px #c1dce5;border-radius: 10px 10px 10px 10px;
+}
+.leaderTable {
+    border: 1px solid green;
+    padding-top: 5px;
+    background-color: #124272;
+    position: relative;
+    margin: 0 auto;
+    box-shadow: 5px 5px 10px 10px #c1dce5;border-radius: 10px 10px 10px 10px;
+}
+.leaderTable td {
+    color:black;
+    border:2px dotted green;
+    background-color:#e7f4fa;border-radius: 10px 10px 10px 10px;
+}
+.leaderTable th {color:black;
+    border:2px double green;border-radius: 5px 5px 5px 5px;
+    }
+
+.ChartPlayer {
+    -webkit-box-shadow: 10px 10px 5px 0px #061a47;
+-moz-box-shadow: 10px 10px 5px 0px #061a47;
+box-shadow: 10px 10px 5px 0px #061a47;margin-left:10px;border-radius: 10px 10px 10px 10px;background-image: url(../images/chartBack.png);    
+}
+.ChartTeam {
+    -webkit-box-shadow: 6px 6px 3px 0px #061a47;
+-moz-box-shadow: 6px 6px 3px 0px #061a47;
+box-shadow: 6px 6px 3px 0px #061a47;margin-left:7px;margin-bottom:7px;border-radius: 10px 10px 10px 10px;background-image: url(../images/chartBack.png);    
+}
+
+.has-tooltip {
+  position:relative;
+}
+
+.has-tooltip .tooltip {
+  display:none;
+  padding:10px;
+  border:1px solid black;
+  background-color:gray;
+  position:absolute;
+  top:100%;
+  left:10%;
+  z-index:999;
+}
+
+.TeamHover{
+    height:120px;width:120px;display:none;position:absolute;left:130px;top:140px;
+}
+
+.PreviewTable td {max-width:350px;
+}
+
+.divball {display:none;}
+#unicorn { z-index: -10; position: absolute; left: 40%;}
+
+/*.earthdiv {width:50px;height:50px;}
+#unicornEarth { z-index: 5;position: absolute;top:400px; left: 10%;}*/
+
+#maincontent {
+    margin: auto;
+    padding:0px 0px 0px 0px;
+    width: 80%;
+    height:100%;
+    display: block;
+    -moz-box-shadow: 0px 0px 12px 7px rgba(120, 49, 111, 0.75);
+    -webkit-box-shadow: 0px 0px 12px 7px rgba(120, 49, 111, 0.75);
+    box-shadow: 0px 0px 12px 7px rgba(120, 49, 111, 0.75);    
+}
+
+/*koumpi contact*/
+.contactButton {
+       background-image: url(../images/contact.png);
+       background-repeat:no-repeat;
+        display:inline-block;        
+        width:75px;height:50px;
+               opacity:0.8;
+    }
+.contactButton:hover {        
+opacity:1;    }
+.contactButton:active {
+        position:relative;
+        top:1px;
+    }
+/*koumpi contact telos*/
+
+/*koumpi send newsletter telos*/
+.sendbutton {
+	-moz-box-shadow:inset 1px 1px 0px -1px #97c4fe;
+	-webkit-box-shadow:inset 1px 1px 0px -1px #97c4fe;
+	box-shadow:inset 1px 1px 0px -1px #97c4fe;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #70d4f5), color-stop(1, #1e62d0) );
+	background:-moz-linear-gradient( center top, #70d4f5 5%, #1e62d0 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#70d4f5', endColorstr='#1e62d0');
+	background-color:#70d4f5;
+	-webkit-border-top-left-radius:37px;
+	-moz-border-radius-topleft:37px;
+	border-top-left-radius:37px;
+	-webkit-border-top-right-radius:0px;
+	-moz-border-radius-topright:0px;
+	border-top-right-radius:0px;
+	-webkit-border-bottom-right-radius:37px;
+	-moz-border-radius-bottomright:37px;
+	border-bottom-right-radius:37px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+	border-bottom-left-radius:0px;
+	text-indent:0;
+	border:1px solid #337fed;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	height:51px;
+	line-height:51px;
+	width:101px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #1570cd;
+}
+.sendbutton:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #1e62d0), color-stop(1, #70d4f5) );
+	background:-moz-linear-gradient( center top, #1e62d0 5%, #70d4f5 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e62d0', endColorstr='#70d4f5');
+	background-color:#1e62d0;
+	cursor: pointer;
+}
+
+.sendbutton:active {
+	position:relative;
+	top:1px;
+}
+/*koumpi send newsletter */
+
+
+#changing {
+/*background-image: linear-gradient(bottom, #F5D4AB 13%, #5C3840 63%);
+background-image: -o-linear-gradient(bottom, #F5D4AB 13%, #5C3840 63%);
+background-image: -moz-linear-gradient(bottom, #F5D4AB 13%, #5C3840 63%);
+background-image: -webkit-linear-gradient(bottom, #F5D4AB 13%, #5C3840 63%);
+background-image: -ms-linear-gradient(bottom, #F5D4AB 13%, #5C3840 63%);
+background-image: -webkit-gradient(	linear,	left bottom,left top,color-stop(0.13, #F5D4AB),color-stop(0.63, #5C3840));*/
+
+/* IE10  */ 
+background-image: -ms-linear-gradient(top, #5C3840 0%, #5C3840 50%, #F5D4AB 100%);
+/* Mozilla Firefox */ 
+background-image: -moz-linear-gradient(top, #5C3840 0%, #5C3840 50%, #F5D4AB 100%);
+ 
+ opacity: 0.88;
+    width: 100%;
+display:inline-block;}
+/*Team.aspx , players.aspx arxi*/
+.GridContent {
+    text-align: left;
+    width:100%;
+display:inline-block;
+}
+.GridTeam{float:left;display:block;}
+.GridTeamDetails{float:left;display:block;margin-top:10px;}
+
+aside {
+    float: right;
+    width: 190px;
+    padding: 0 15px 20px 15px;
+    border-left: 3px dotted #FFF;display:block;
+}
+/*Team.aspx telos*/
+.navMain {
+    background-color: #d8d8d8;
+    background-image: url(../images/nav.jpg) ;
+    margin: 0px;
+    border: 0px;
+    padding-bottom: 72px;
+        
+}
+
+#contentInside {
+    text-align: left;
+    width: auto;
+    padding: 0;
+    padding-left: 5px;
+    padding-bottom: 0px;    
+}
+
+/*efe header footer background      (height:414px gia to header)*/
+.headerFilm {height:820px;width:190px;/*left: 1370px;position:absolute;*/ background: url(../images/bah.jpg);display:none;/*gia to header thelei bah.png*/
+}
+.footerFilm {height:243px;width:182px;/*left: 1370px;position:absolute;*/ background: url(../images/bah.png);display:none;
+}
+/******************/
+
+
+.headerMain {
+    background-color:black;
+    background-image: url(../images/header.jpg);
+    background-repeat:no-repeat;
+    background-position: top;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    height:414px;
+}
+
+.footerMain {
+    background-color: #463b49;
+    border-top: 1px ridge #FFF;
+    border-bottom: 1px ridge #FFF;
+    background-image: url(../images/footer.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;    
+}
+
+
+
+#footerback {
+    background-color: #F9F3E6;
+    background-image: url(../images/nav.jpg);
+    padding-top: 72px;    
+}
+
+a:link {color:currentColor}      /* unvisited link */
+a:visited {color:darkorange;}  /* visited link */
+a:hover {color:brown;}  /* mouse over link */
+a:active {color:antiquewhite}  /* selected link */ 
+
+hr {
+    border-top: none;
+    text-align: center;
+    margin-bottom:0px;
+}
+
+hr:after {
+    content: url(../images/hr.png);
+    position: relative;
+    margin-bottom:0px;
+}
+h1{
+    margin-bottom: 0px;
+}
+h2{margin-top:0px;font-family:'LMS I Love This Game';}
+.BackToTopImg:hover { 
+    opacity:0.6;
+}
+/*#FrontBall{
+    position:absolute;
+    left:0px;
+    top:0px;
+    padding:0px 0px 0px 0px;
+           
+}*/
+
+/*-----GridView results Views Style-----*/
+.grid-results tr.normal:hover, .grid-results tr.alternate:hover
+{
+   background-color:antiquewhite;
+   color:indigo;
+}
+.grid-results {
+    
+    padding: 0;
+    border: 0;
+    font-size: 0.9em;
+    font-family: "Verdana, Arial, Helvetica, sans-serif, Trebuchet MS";
+    display:inline;
+}
+
+.grid-results tr.header
+{
+   color: white;
+   background-color: #5a6e78;
+   height: 25px;
+   vertical-align: middle;
+   text-align: center;
+   font-weight: bold;
+}
+
+.grid-results tr.normal
+{
+   color: black;
+   background-color: #c1e6ff;
+   height: 25px;
+   vertical-align: middle;
+   text-align: center;
+}
+
+    .grid-results tr.alternate {
+        color: black;
+        background-color: #a8a8a8;
+        height: 25px;
+        vertical-align: middle;
+        text-align: center;
+    }
+    /*-----GridView results  Style Telos-----*/
+
+
+
+/*-----GridView Teams Views Style-----*/
+.grid-viewPlayers tr.normal:hover, .grid-viewPlayers tr.alternate:hover
+{
+   background-color:antiquewhite;
+   color:indigo;
+}
+.grid-viewPlayers {
+    margin-left: 10px;
+    padding: 0;
+    border: none;
+    font-size: 0.9em;
+    font-family: "Verdana, Arial, Helvetica, sans-serif, Trebuchet MS";
+    display:block;position:relative;
+    
+    
+    color:darkblue;
+}
+  
+.grid-viewPlayers tr.header
+{
+   color: white;
+   background-color: #5a6e78;
+   height: 25px;
+   vertical-align: middle;
+   text-align: center;
+   font-weight: bold;
+}
+
+
+
+.grid-viewPlayers tr.normal
+{
+   color: black;
+   background-color: #c1e6ff;
+   height: 25px;
+   vertical-align: middle;
+   text-align: center;
+}
+
+.grid-viewPlayers tr.alternate
+{
+   color: black;
+   background-color: #a8a8a8;
+   height: 25px;
+   vertical-align: middle;
+   text-align: center;
+}
+/*-----GridView Teams Views Style Telos-----*/
+
+/*-----GridView Coach Views Style-----*/
+
+.grid-viewCoach
+{
+   padding: 0;
+   border: 1px solid #333;
+   font-family:'Baskerville Old Face';
+   font-size: 1.2em;
+    margin-left:10px;
+}
+
+.grid-viewCoach tr.header
+{
+   color: white;
+   background-color: #5a6e78;
+   height: 25px;
+   vertical-align: middle;
+   text-align: center;
+   font-weight: bold;
+}
+
+.grid-viewCoach tr.normal
+{
+   color: black;
+   background-color: #c1e6ff;
+   height: 25px;
+   vertical-align: middle;
+   text-align: center;
+}
+/*-----GridView Coach Views Style Telos-----*/
+
+
+
+
+
+
+
+/* CSS to format a detailsview --START */
+
+
+.cssdetailsview { font-family:'Bauhaus 93'; background-color:#fff; margin:0px 0px 0 10px; border:solid 1px #525252; border-collapse:collapse; text-align:center;position:relative;
+
+ background-image: -moz-linear-gradient(bottom, rgb(44,40,154) 26%, rgb(48,126,209) 63%);
+    background-image: -ms-linear-gradient(bottom, rgb(44,40,154) 26%, rgb(48,126,209) 63%);
+    background-image: -o-linear-gradient(bottom, rgb(44,40,154) 26%, rgb(48,126,209) 63%);
+    background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0.26, rgb(44,40,154)), color-stop(0.63, rgb(48,126,209));
+    background-image: -webkit-linear-gradient(bottom, rgb(44,40,154) 26%, rgb(48,126,209) 63%);
+    background-image: linear-gradient(bottom, rgb(44,40,154) 26%, rgb(48,126,209) 63%);
+}
+
+.cssdetailsview td { padding:10px; border:solid 1px #c1c1c1; color:coral; text-align:left;}
+
+
+.cssdetailsview .header td { text-align:center; padding:4px 2px; color:silver; background:#424242 url(../images/PlayersCss/grd_head.png) repeat-x top; border-left:solid 1px #525252; }
+
+
+.cssdetailsview .fieldheader { color:#73c2dc; width:150px; text-align:right;}
+
+
+.cssdetailsview .altrow { background: #fcfcfc url(../images/PlayersCss/grd_alt.png) repeat-x top; }
+
+
+.cssdetailsview .command { background: #424242 url(../images/PlayersCss/grd_pgr.png) repeat-x top; line-height: 20px;}
+
+.cssdetailsview .command td { text-align:center;}
+
+.cssdetailsview .command a {color:Silver; text-decoration:none; padding:10px; }
+
+.cssdetailsview .command a:hover {color:Silver; text-decoration:underline; }
+
+.cssdetailsview .pager {}
+
+
+/* CSS to format a detailsview --END */
+
+
+
