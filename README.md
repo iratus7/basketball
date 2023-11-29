@@ -6,4 +6,5 @@ It is a system for managing, capturing and tracking statistical data in basketba
 ![2](https://github.com/iratus7/basketball/assets/2788154/612a6039-199d-4853-9ec9-af01e07d1fad)
 ![3](https://github.com/iratus7/basketball/assets/2788154/50e77d5c-f10d-4aef-be57-b62f0aa0aef8)
 ![4](https://github.com/iratus7/basketball/assets/2788154/437cf94f-8246-4188-bfb0-b783bc3273d1)
+![6](https://github.com/iratus7/basketball/assets/2788154/9b1101e5-b790-4112-b05e-48190bea594d)
 ![5](https://github.com/iratus7/basketball/assets/2788154/983eba86-e1b9-488f-9806-932005ced42f)
